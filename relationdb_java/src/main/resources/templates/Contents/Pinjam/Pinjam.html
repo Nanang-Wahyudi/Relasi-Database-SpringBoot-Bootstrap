@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{Fragments/Navbar :: html_head}"></head>
+<body style="background-color: #f0f1f2;">
+    
+    <div th:replace="~{Fragments/Navbar :: navbar}"></div>
+    
+    <div class="container px-5 pt-5">
+        <div class="card mt-5 shadow">
+            <div class="card-header ps-5">
+                <a th:href="@{/input_peminjam}" class="btn btn-outline-success">Tambah Data Peminjam</a>
+            </div>
+            <h4 class=" mt-4 mb-3 text-primary text-center">DATA PEMINJAM BUKU</h4>
+            <div class="card-body px-5">
+                <table class="table">
+                    <thead class="bg-light border-bottom border-primary border-2">
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama Peminjam</th>
+                        <th scope="col">Judul Buku</th>
+                        <th scope="col">Tanggal Pinjam</th>
+                        <th scope="col">Tanggal Kembali</th>
+                        <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="data : ${all_pinjam}">
+                        <th scope="row">[[${data.id_pinjam}]]</th>
+                        <td>[[${data.anggotaMTO.nama}]]</td>
+                        <td>[[${data.buku.judul}]]</td>
+                        <td>[[${data.tgl_pinjam}]]</td>
+                        <td>[[${data.tgl_kembali}]]</td>
+                        <td>
+                            <a th:href="@{'/edit_peminjam/'+${data.id_pinjam}}" class="btn btn-sm btn-warning">Edit</a>
+                            <a th:href="@{'/delete_peminjam/'+${data.id_pinjam}}" class="btn btn-sm btn-danger">Hapus</a>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

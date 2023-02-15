@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{Fragments/Navbar :: html_head}"></head>
+<body style="background-color: #f0f1f2;">
+    
+    <div th:replace="~{Fragments/Navbar :: navbar}"></div>
+    
+    <div class="container px-5 pt-5">
+        <div class="card mt-5 shadow">
+            <h4 class=" mt-4 mb-3 text-primary text-center">DETAIL PEMINJAM BUKU</h4>
+            <div class="card-body px-5 table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr class="d-flex">
+                        <th scope="col" class="col-1">#</th>
+                        <th scope="col" class="col-2">Nama Peminjam</th>
+                        <th scope="col" class="col-2">Tanggal Lahir</th>
+                        <th scope="col" class="col-2">Kota</th>
+                        <th scope="col" class="col-2">No HP</th>
+                        <th scope="col" class="col-2">Judul Buku</th>
+                        <th scope="col" class="col-2">Jenis Buku</th>
+                        <th scope="col" class="col-2">Tahun Terbit</th>
+                        <th scope="col" class="col-2">Tanggal Pinjam</th>
+                        <th scope="col" class="col-2">Tanggal Kembali</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="d-flex">
+                        <th scope="row" class="col-1">1</th>
+                        <td class="col-2">Mark</td>
+                        <td class="col-2">Otto</td>
+                        <td class="col-2">@mdo</td>
+                        <td class="col-2">Mark</td>
+                        <td class="col-2">Otto</td>
+                        <td class="col-2">@mdo</td>
+                        <td class="col-2">Mark</td>
+                        <td class="col-2">Otto</td>
+                        <td class="col-2">@mdo</td>
+                        </tr>
+                        <tr class="d-flex">
+                        <th scope="row" class="col-1">2</th>
+                        <td class="col-2">Jacob</td>
+                        <td class="col-2">Thornton</td>
+                        <td class="col-2">@fat</td>
+                        <td class="col-2">Jacob</td>
+                        <td class="col-2">Thornton</td>
+                        <td class="col-2">@fat</td>
+                        <td class="col-2">Jacob</td>
+                        <td class="col-2">Thornton</td>
+                        <td class="col-2">@fat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

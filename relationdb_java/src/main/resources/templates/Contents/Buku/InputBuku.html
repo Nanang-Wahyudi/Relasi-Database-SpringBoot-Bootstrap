@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{Fragments/Navbar :: html_head}"></head>
+<body style="background-color: #f0f1f2;">
+    
+    <div th:replace="~{Fragments/Navbar :: navbar}"></div>
+    
+    <div class="container mt-5 pt-3">
+        <div class="card shadow offset-2" style="width: 800px;">
+            <div class="card-body px-5">
+                <h4 class="text-primary mb-5 mt-3 text-center">FORM TAMBAH DATA BUKU</h4>
+                <form th:action="@{/save_buku}" method="post">
+                    <div class="m-3">
+                        <div class="form-group row">
+                            <label for="judul" class="col-form-label col-sm-3">Judul Buku</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="judul" id="judul" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-3">
+                        <div class="form-group row">
+                            <label for="jenis" class="col-form-label col-sm-3">Jenis Buku</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="jenis_buku" id="jenis" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-3">
+                        <div class="form-group row">
+                            <label for="tahun_terbit" class="col-form-label col-sm-3">Tahun Terbit</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" name="tahun_terbit" id="tahun_terbit" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="float-end mt-4">
+                        <button type="submit" class="btn btn-outline-success">Submit</button>
+                        <button type="reset" class="btn btn-outline-warning">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="mt-5 offset-2">
+            <a th:href="@{/buku}" class="shadow-sm btn btn-outline-primary">Kembali</a>
+        </div>
+    </div>
+    
+</body>
+</html>
