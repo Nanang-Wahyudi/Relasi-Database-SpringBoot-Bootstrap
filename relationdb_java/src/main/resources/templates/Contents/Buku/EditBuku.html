@@ -9,12 +9,14 @@
         <div class="card shadow offset-2" style="width: 800px;">
             <div class="card-body px-5">
                 <h4 class="text-primary mb-5 mt-3 text-center">FORM EDIT DATA BUKU</h4>
-                <form action="" method="post">
+                <form th:action="@{/update_buku}" method="post">
+                    <input type="hidden" name="id_buku" th:value="${dataBuku.id_buku}">
+
                     <div class="m-3">
                         <div class="form-group row">
                             <label for="judul" class="col-form-label col-sm-3">Judul Buku</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="judul" required>
+                                <input type="text" class="form-control" name="judul" id="judul" required th:value="${dataBuku.judul}">
                             </div>
                         </div>
                     </div>
@@ -22,7 +24,7 @@
                         <div class="form-group row">
                             <label for="jenis" class="col-form-label col-sm-3">Jenis Buku</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="jenis" required>
+                                <input type="text" class="form-control" name="jenis_buku" id="jenis" required th:value="${dataBuku.jenis_buku}">
                             </div>
                         </div>
                     </div>
@@ -30,7 +32,7 @@
                         <div class="form-group row">
                             <label for="tahun_terbit" class="col-form-label col-sm-3">Tahun Terbit</label>
                             <div class="col-sm-9">
-                                <input type="number" class="form-control" id="tahun_terbit" required>
+                                <input type="number" class="form-control" name="tahun_terbit" id="tahun_terbit" required th:value="${dataBuku.tahun_terbit}">
                             </div>
                         </div>
                     </div>

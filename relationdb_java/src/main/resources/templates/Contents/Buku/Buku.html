@@ -29,8 +29,8 @@
                         <td>[[${data.jenis_buku}]]</td>
                         <td>[[${data.tahun_terbit}]]</td>
                         <td>
-                            <a th:href="@{/edit_buku}" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Hapus</a>
+                            <a th:href="@{'/edit_buku/'+${data.id_buku}}" class="btn btn-sm btn-warning">Edit</a>
+                            <a th:href="@{'/delete_buku/'+${data.id_buku}}" class="btn btn-sm btn-danger">Hapus</a>
                         </td>
                         </tr>
                     </tbody>

@@ -9,12 +9,14 @@
         <div class="card shadow offset-2" style="width: 800px;">
             <div class="card-body px-5">
                 <h4 class="text-primary mb-5 mt-3 text-center">FORM EDIT DATA ANGGOTA</h4>
-                <form action="" method="post">
+                <form th:action="@{/update_anggota}" method="post">
+                    <input type="hidden" name="id_anggota" th:value="${dataAnggota.id_anggota}">
+
                     <div class="m-3">
                         <div class="form-group row">
                             <label for="nama" class="col-form-label col-sm-3">Nama Lengkap</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="nama" required>
+                                <input type="text" class="form-control" name="nama" id="nama" required th:value="${dataAnggota.nama}">
                             </div>
                         </div>
                     </div>
@@ -22,7 +24,7 @@
                         <div class="form-group row">
                             <label for="tanggal_lahir" class="col-form-label col-sm-3">Tanggal Lahir</label>
                             <div class="col-sm-9">
-                                <input type="date" class="form-control" id="tanggal_lahir" required>
+                                <input type="date" class="form-control" name="tanggal_lahir" id="tanggal_lahir" required th:value="${dataAnggota.tanggal_lahir}">
                             </div>
                         </div>
                     </div>
@@ -30,7 +32,7 @@
                         <div class="form-group row">
                             <label for="kota" class="col-form-label col-sm-3">Kota</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="kota" required>
+                                <input type="text" class="form-control" name="kota" id="kota" required th:value="${dataAnggota.kota}">
                             </div>
                         </div>
                     </div>
@@ -38,7 +40,7 @@
                         <div class="form-group row">
                             <label for="no_hp" class="col-form-label col-sm-3">No HP</label>
                             <div class="col-sm-9">
-                                <input type="number" class="form-control" id="no_hp" required>
+                                <input type="number" class="form-control" name="no_hp" id="no_hp" required th:value="${dataAnggota.no_hp}">
                             </div>
                         </div>
                     </div>
